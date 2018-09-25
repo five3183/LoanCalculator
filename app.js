@@ -5,6 +5,7 @@ const years = document.getElementById('years')
 const monthlyPayment = document.getElementById('monthly-payment')
 const totalPayment = document.getElementById('total-payment')
 const totalInterest = document.getElementById('total-interest')
+const errorAlert = document.getElementById('error')
 
 const showError = error => {
    // Get elements from page
@@ -22,7 +23,7 @@ const showError = error => {
       errorDiv.className = 'alert alert-danger'
       errorDiv.appendChild(document.createTextNode(error))
       //Insert error above heading using insertBefore.  This is called on a parent.  It takes 2 arguments, one is the element that is being inserted the other is where it is to be inserted before.
-      card.insertBefore(errorDiv, heading)
+      errorAlert.appendChild(errorDiv)
       
       // clear error after 3 seconds or 3000 milisecods
       setTimeout(clearError, 3000)
@@ -49,6 +50,8 @@ const calculateResults = e => {
       document.getElementById('loading').style.display = 'none'
       document.getElementById('results').style.display = 'block'
       document.getElementById('calculate').style.display = 'block'
+      document.querySelector('h1').style.display = 'block'
+
    }
    else {
       showError('Please enter valid numbers...')
@@ -57,6 +60,7 @@ const calculateResults = e => {
       document.getElementById('results').style.display = 'none'
       document.getElementById('loading').style.display = 'none'
       document.getElementById('calculate').style.display = 'block'
+      document.querySelector('h1').style.display = 'block'
    }
 }
 
@@ -66,6 +70,7 @@ document.getElementById('loan-form').addEventListener('submit', e => {
    document.getElementById('results').style.display = 'none'
    document.getElementById('loading').style.display = 'block'
    document.getElementById('calculate').style.display = 'none'
+   document.querySelector('h1').style.display = 'none'
 
    // after 2 seconds call calculateResults
    setTimeout(calculateResults, 2000)
