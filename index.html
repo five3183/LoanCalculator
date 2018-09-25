@@ -20,29 +20,32 @@
             <div class="card card-body text-center mt-5">
                <h1 class="heading display-5 pb-3">Loan Calculator</h1>
                <form id="loan-form">
-                  <div class="form-group">
-                     <div class="input-group">
-                        <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" id="amount" placeholder="Loan Amount">
+                  <div id="calculate">
+                     <div class="form-group">
+                        <div class="input-group">
+                           <span class="input-group-text">$</span>
+                           <input type="text" class="form-control" id="amount" placeholder="Loan Amount">
+                        </div>
                      </div>
-                  </div>
-                  <div class="form-group">
-                     <div class="input-group">
-                        <span class="input-group-text">%</span>
-                        <input type="text" class="form-control" id="interest" placeholder="Interest Rate">
+                     <div class="form-group">
+                        <div class="input-group">
+                           <span class="input-group-text">%</span>
+                           <input type="text" class="form-control" id="interest" placeholder="Interest Rate">
+                        </div>
                      </div>
-                  </div>
-                  <div class="form-group">
-                     <input type="text" class="form-control" id="years" placeholder="Years to Repay">
-                  </div>
-                  <div class="form-group">
-                     <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                     <div class="form-group">
+                        <input type="text" class="form-control" id="years" placeholder="Years to Repay">
+                     </div>
+                     <div class="form-group">
+                        <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                     </div>
                   </div>
                </form>
                <!--LOADER HERE-->
-               <!-- <div id="loading">
+               <div id="loading">
+                  <h3>Calculating Results...</h3>
                   <img src="style/img/loading.gif" alt="">
-               </div> -->
+               </div>
                <!--RESULTS-->
                <div id="results" class="pt-4">
                   <h5>Results</h5>
@@ -53,10 +56,9 @@
                      </div>
                   </div>
                   <div class="form-group">
-                        <div class="input-group">
-                           <span class="input-group-text">Total Payment</span>
-                           <input type="text" class="form-control" id="total-payment" disabled>
-                        </div>
+                     <div class="input-group">
+                        <span class="input-group-text">Total Payment</span>
+                        <input type="text" class="form-control" id="total-payment" disabled>
                      </div>
                   </div>
                   <div class="form-group">
@@ -65,6 +67,7 @@
                         <input type="text" class="form-control" id="total-interest" disabled>
                      </div>
                   </div>
+               </div>  
             </div>   
          </div>
       </div>

@@ -44,12 +44,28 @@ const calculateResults = e => {
       monthlyPayment.value = monthly.toFixed(2)
       totalPayment.value = (monthly * calculatedPayments).toFixed(2)
       totalInterest.value = ((monthly * calculatedPayments)- principal).toFixed(2)
+
+      document.getElementById('loading').style.display = 'none'
+      document.getElementById('results').style.display = 'block'
+      document.getElementById('calculate').style.display = 'block'
+
    }
    else {
-      showError('Please Enter Valid Numbers')
+      showError('Please enter valid numbers...')
+      document.getElementById('results').style.display = 'none'
+      document.getElementById('loading').style.display = 'none'
+      document.getElementById('calculate').style.display = 'block'
+
    }
-      e.preventDefault()
 }
 
 // Listen for submit
-document.getElementById('loan-form').addEventListener('submit', calculateResults)
+document.getElementById('loan-form').addEventListener('submit', e => {
+
+   document.getElementById('results').style.display = 'none'
+   document.getElementById('loading').style.display = 'block'
+   document.getElementById('calculate').style.display = 'none'
+   setTimeout(calculateResults, 2000)
+
+   e.preventDefault()
+})
