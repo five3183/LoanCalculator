@@ -41,9 +41,9 @@ const calculateResults = e => {
 
    // check to see if value is a finite number.
    if(isFinite(monthly)){
-      monthlyPayment.value = monthly.toFixed(2)
-      totalPayment.value = (monthly * calculatedPayments).toFixed(2)
-      totalInterest.value = ((monthly * calculatedPayments)- principal).toFixed(2)
+      monthlyPayment.value = `$${monthly.toFixed(2)}`
+      totalPayment.value = `$${(monthly * calculatedPayments).toFixed(2)}`
+      totalInterest.value = `$${((monthly * calculatedPayments)- principal).toFixed(2)}`
       
       // toggle div displays
       document.getElementById('loading').style.display = 'none'

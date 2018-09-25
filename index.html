@@ -23,18 +23,22 @@
                   <div id="calculate">
                      <div class="form-group">
                         <div class="input-group">
-                           <span class="input-group-text">$</span>
+                           <span class="input-group-text alert-success">$</span>
                            <input type="text" class="form-control" id="amount" placeholder="Loan Amount">
                         </div>
                      </div>
                      <div class="form-group">
                         <div class="input-group">
-                           <span class="input-group-text">%</span>
+                           <span class="input-group-text alert-success">%</span>
                            <input type="text" class="form-control" id="interest" placeholder="Interest Rate">
                         </div>
                      </div>
                      <div class="form-group">
-                        <input type="text" class="form-control" id="years" placeholder="Years to Repay">
+                        <div class="input-group">
+                           <span class="input-group-text alert-success">Number of Years:</span>
+                           <input type="text" class="form-control" id="years" placeholder="Years to Repay">
+                        </div>
+                        
                      </div>
                      <div class="form-group">
                         <input type="submit" value="Calculate" class="btn btn-dark btn-block">
@@ -51,19 +55,19 @@
                   <h5>Results</h5>
                   <div class="form-group">
                      <div class="input-group">
-                        <span class="input-group-text">Monthly Payment</span>
+                        <span class="input-group-text alert-success">Monthly Payment:</span>
                         <input type="text" class="form-control" id="monthly-payment" disabled>
                      </div>
                   </div>
                   <div class="form-group">
                      <div class="input-group">
-                        <span class="input-group-text">Total Payment</span>
+                        <span class="input-group-text alert-success">Total Payment:</span>
                         <input type="text" class="form-control" id="total-payment" disabled>
                      </div>
                   </div>
                   <div class="form-group">
                      <div class="input-group">
-                        <span class="input-group-text">Total Interest</span>
+                        <span class="input-group-text alert-success">Total Interest:</span>
                         <input type="text" class="form-control" id="total-interest" disabled>
                      </div>
                   </div>
